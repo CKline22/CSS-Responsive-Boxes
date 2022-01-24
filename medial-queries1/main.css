@@ -1,3 +1,36 @@
 body {
   background: blanchedalmond;
 }
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header {
+  border: 5px solid cornflowerblue;
+}
+main {
+  border: 5px solid cornflowerblue;
+}
+footer {
+  border: 5px solid cornflowerblue;
+}
+header, footer {
+  flex-grow: 1;
+}
+main {
+  flex-grow: 3;
+}
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header {
+    width: 100%;
+  }
+  header, main, footer {
+    margin: 1em;
+  }
+}
